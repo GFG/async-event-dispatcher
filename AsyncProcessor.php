@@ -35,6 +35,9 @@ class AsyncProcessor implements Processor
         $this->dispatcher = $dispatcher;
     }
 
+    /**
+     * @return object|string
+     */
     public function process(Message $message, Context $context)
     {
         if (false == $eventName = $message->getProperty('event_name')) {
